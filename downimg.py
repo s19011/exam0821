@@ -14,7 +14,7 @@ for link in soup.find_all("img"): # imgタグを取得しlinkに格納
 
 for target in images: # imagesからtargetに入れる
     re = requests.get(target)
-    with open('/home/s19011/python/web/exam0821/date/' + target.split('/')[-1], 'wb') as f: # imgフォルダに格納
+    with open('/home/s19011/Documents/date/' + target.split('/')[-1], 'wb') as f: # imgフォルダに格納
         f.write(re.content) # .contentにて画像データとして書き込む
 
 print("ok") # 確認
